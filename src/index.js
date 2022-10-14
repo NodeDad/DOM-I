@@ -40,3 +40,76 @@ const siteContent = { // DO NOT CHANGE THIS OBJECT
 };
 
 console.log('project wired!')
+
+//navigation
+
+//storing elements in variables
+let nav = document.querySelector("nav");
+let navItems = nav.querySelectorAll("a");
+
+//manipulating elements
+navItems[0].innerHTML = siteContent.nav['nav-item-1'];
+navItems[0].setAttribute('class', 'italic');
+navItems[1].innerHTML = siteContent.nav['nav-item-2'];
+navItems[1].setAttribute('class', 'italic');
+navItems[2].innerHTML = siteContent.nav['nav-item-3'];
+navItems[2].setAttribute('class', 'italic');
+navItems[3].innerHTML = siteContent.nav['nav-item-4'];
+navItems[3].setAttribute('class', 'italic');
+navItems[4].innerHTML = siteContent.nav['nav-item-5'];
+navItems[4].setAttribute('class', 'italic');
+navItems[5].innerHTML = siteContent.nav['nav-item-6'];
+navItems[5].setAttribute('class', 'italic');
+console.log(nav)
+//cta
+
+//storing elements in variables
+let ctaElem = document.querySelector('.cta');
+let ctaH1 = ctaElem.querySelector('h1');
+let ctaButton = ctaElem.querySelector('button');
+
+//manipulating elements
+ctaH1.innerHTML = siteContent.cta.h1;
+ctaButton.innerHTML = siteContent.cta.button;
+
+//main-content 
+let mainContentElem = document.querySelector('.main-content');
+let contentsElem = mainContentElem.querySelectorAll('.text-content');
+
+//manipulating elements
+contentsElem[0].querySelector('h4').innerHTML = siteContent["main-content"]["features-h4"];
+contentsElem[0].querySelector('p').innerHTML = siteContent["main-content"]["features-content"];
+contentsElem[1].querySelector('h4').innerHTML = siteContent["main-content"]["about-h4"];
+contentsElem[1].querySelector('p').innerHTML = siteContent["main-content"]["about-content"];
+contentsElem[2].querySelector('h4').innerHTML = siteContent["main-content"]["services-h4"];
+contentsElem[2].querySelector('p').innerHTML = siteContent["main-content"]["services-content"];
+contentsElem[3].querySelector('h4').innerHTML = siteContent["main-content"]["product-h4"];
+contentsElem[3].querySelector('p').innerHTML = siteContent["main-content"]["product-content"];
+contentsElem[4].querySelector('h4').innerHTML = siteContent["main-content"]["vision-h4"];
+contentsElem[4].querySelector('p').innerHTML = siteContent["main-content"]["vision-content"];
+
+//contact
+let contactElem = document.querySelector('.contact');
+let contactH4 = contactElem.querySelector('h4');
+let contactP = contactElem.querySelectorAll('p');
+console.log(contactElem)
+//manipulating elements
+contactH4.innerHTML = siteContent.contact["contact-h4"];
+contactP[0].innerHTML = siteContent.contact.address;
+contactP[1].innerHTML = siteContent.contact.phone;
+contactP[2].innerHTML = siteContent.contact.email;
+
+//footer
+
+let footerElem = document.querySelector('footer');
+footerElem.querySelector('a').innerHTML = siteContent.footer.copyright;
+footerElem.querySelector('a').setAttribute('class', 'bold');
+
+//images
+let accentImg = document.querySelector('#middle-img');
+let ctaImg = document.querySelector('#cta-img');
+let logoImg = document.querySelector('#logo-img');
+
+accentImg.setAttribute('src', siteContent.images["accent-img"]);
+ctaImg.setAttribute('src', siteContent.images["cta-img"]);
+logoImg.setAttribute('src', siteContent.images["logo-img"]);
